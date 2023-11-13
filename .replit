@@ -1,5 +1,6 @@
-run = "tsx index.ts"
-entrypoint = "index.ts"
+run = "npm start"
+entrypoint = "src/index.js"
+
 hidden = [".config", "package-lock.json", "tsconfig.json"]
 
 [packager]
@@ -27,6 +28,7 @@ requiredFiles = [".replit", "replit.nix", ".config"]
     start = "typescript-language-server --stdio"
 
 [deployment]
-run = ["tsx", "index.ts"]
+run = ["js", "./src/index.js"]
 deploymentTarget = "cloudrun"
 ignorePorts = false
+build = ["sh", "-c", "npm run build"]

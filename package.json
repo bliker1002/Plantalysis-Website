@@ -2,7 +2,7 @@
   "name": "plantalysis-website",
   "version": "1.0.0",
   "description": "A single-page application for Plantalysis.",
-  "main": "src/index.tsx",
+  "main": "src/index.js",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

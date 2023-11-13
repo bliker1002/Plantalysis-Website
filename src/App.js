@@ -1,10 +1,14 @@
 import React from 'react';
 import Header from './components/Header';
+import Introduction from './components/Introduction'; // Make sure the path is correct
+import Supported from './components/Supported'; // Import the Supported component
+import Divider from './components/Divider'; // Import the Divider component
 import './App.css';
+
 
 function App() {
   // Function to handle scroll to specific section
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (sectionId) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -13,12 +17,12 @@ function App() {
       <Header scrollToSection={scrollToSection} />
       <main>
         <section id="introduction">
-          {/* Content for Introduction */}
+          <Introduction />
         </section>
-        <section id="supported-equipment">
-          {/* Content for Supported Equipment */}
+        <section id="supported-equipment-manufacturers">
+          <Supported />
         </section>
-        <div className="divider"></div>
+        <Divider /> {/* Render the Divider component */}
         <section id="services">
           <article id="food-beverage">
             {/* Content for Food & Beverage */}
